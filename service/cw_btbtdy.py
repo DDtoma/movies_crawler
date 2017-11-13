@@ -33,6 +33,7 @@ def start(start_url):
     global detail_links
 
     html = cu.get_html(start_url)
+    hostname = cu.getHostname(start_url)
     plinks_list = cu.get_url(html, links_ruls["find_page_rule"], hostname)
     last_page_link = plinks_list[-1]
     result = re.findall(r'\d+', last_page_link)[1]
