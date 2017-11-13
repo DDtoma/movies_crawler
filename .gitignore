@@ -7,7 +7,7 @@ cmake-build-debug/
 ## File-based project format:
 *.iws
 atlassian-ide-plugin.xml
-
+.vscode
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
