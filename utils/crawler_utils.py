@@ -4,7 +4,6 @@ from selenium import webdriver
 import requests
 import re
 from urllib.parse import urlparse
-
 from selenium.webdriver import DesiredCapabilities
 
 headers = {"headers": "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"}
@@ -52,7 +51,7 @@ def get_html_js(url):
         service_args.append('--load-images=no')  ##关闭图片加载
         service_args.append('--disk-cache=yes')  ##开启缓存
         service_args.append('--ignore-ssl-errors=true')  ##忽略https错误
-        DesiredCapabilities.PHANTOMJS['phantomjs.page.settings.webSecurityEnabled'] = False;
+        DesiredCapabilities.PHANTOMJS['phantomjs.page.settings.webSecurityEnabled'] = False
         driver = webdriver.PhantomJS(service_args=service_args,desired_capabilities=DesiredCapabilities.PHANTOMJS)
         driver.implicitly_wait(10)
         driver.set_page_load_timeout(10)
